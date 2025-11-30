@@ -1,0 +1,18 @@
+{
+    "name": "tilemaps",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b3ea357a2d66b5447b7dd318074b259e",
+        "GUID:fae71c1e52405f144bf56b5f2cd17eb6",
+        "GUID:4a9b6537ab851eb4b996546c0f74f7fc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
