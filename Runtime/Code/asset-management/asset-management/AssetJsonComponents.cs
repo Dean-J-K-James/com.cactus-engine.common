@@ -6,10 +6,7 @@
  * 
  */
 [System.Serializable]
-struct JsonObject
+struct AssetJsonComponents
 {
-    public string   name;       //
-    public string   slug;       //
-    public string   slugFull;   //
     public string[] components; //
 }

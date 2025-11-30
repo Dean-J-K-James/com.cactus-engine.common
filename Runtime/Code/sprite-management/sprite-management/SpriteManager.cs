@@ -10,11 +10,11 @@ using UnityEngine.U2D;
  */
 public class SpriteManager : Singleton<SpriteManager>
 {
-    public SpriteAtlas atlas;    //
-    public Sprite      untitled; //
+    [SerializeField] SpriteAtlas atlas;    //
+    [SerializeField] Sprite      untitled; //
 
     /**
 	 * 
 	 */
-    public Sprite Get(string k) { Sprite sprite = atlas.GetSprite(k); return sprite != null ? sprite : untitled; }
+    public Sprite Get(string k) { if (atlas == null) { atlas = Resources.Load<SpriteAtlas>("Sprites/sprite-atlas"); } Sprite sprite = atlas.GetSprite(k); return sprite != null ? sprite : untitled; }
 }

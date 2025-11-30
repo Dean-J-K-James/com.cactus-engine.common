@@ -1,0 +1,5 @@
+-scn-setup is per project.
+-it additively loads a scn-asset-management.
+-scn-asset-management loads json assets, sprite assets, and so on.
+-scn-setup which is per project will have the loading icon and wallpaper.
+-scn-asset-management has the loading text and progress bar.

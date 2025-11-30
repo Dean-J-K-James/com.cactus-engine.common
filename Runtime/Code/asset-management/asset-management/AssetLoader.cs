@@ -9,10 +9,9 @@ using UnityEngine;
 /**
  * 
  */
-public class LoadJsonToPrefab : MonoBehaviour
+public class AssetLoader : MonoBehaviour
 {
-    public GameObject emptyGO;     //
-    public string     sceneToLoad; //
+    public GameObject emptyGO; //
 
     /**
      * 
@@ -32,7 +31,7 @@ public class LoadJsonToPrefab : MonoBehaviour
         InvokePrefabs();
         yield return null;
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("scn-menu");
     }
 
     /**
@@ -71,7 +70,7 @@ public class LoadJsonToPrefab : MonoBehaviour
         var entity = Instantiate(prefab, transform);
         entity.name = json.name;
 
-        AddComponents(entity, JsonUtility.FromJson<JsonObject>(json.text).components);
+        AddComponents(entity, JsonUtility.FromJson<AssetJsonComponents>(json.text).components);
         entity.GetComponent<MonoBehaviour>().DataSync(json.text);
 
         return entity;
@@ -107,8 +106,7 @@ public class LoadJsonToPrefab : MonoBehaviour
     {
         foreach (Transform child in Asset.I.transform)
         {
-            //child.gameObject.SetActive(true);
-            child.SendMessage("OnPrefabCreated", SendMessageOptions.DontRequireReceiver); //Change to InvokePrefabCreated
+            child.SendMessage("OnPrefabCreated", SendMessageOptions.DontRequireReceiver);
             child.gameObject.SetActive(false);
         }
     }
@@ -124,17 +122,6 @@ public class LoadJsonToPrefab : MonoBehaviour
                 AddComponentFromType(go, c.ToString());
             }
     }
-
-    /**
-     * 
-     */
-    //void JsonOverwrite(GameObject go, string json)
-    //{
-    //    foreach (var c in go.GetComponents<IComponent>())
-    //    {
-    //        JsonUtility.FromJsonOverwrite(json, c);
-    //    }
-    //}
 
     /**
      * 
