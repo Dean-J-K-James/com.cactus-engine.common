@@ -1,6 +1,6 @@
 {
     "name": "com.cactus-engine.common",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "displayName": "Cactus Engine Common Package",
     "description": "All reusable code, prefabs, scenes and assets.",
     "unity": "6000.2",
