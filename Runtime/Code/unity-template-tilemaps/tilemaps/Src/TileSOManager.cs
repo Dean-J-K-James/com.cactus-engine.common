@@ -10,8 +10,8 @@ using UnityEngine.Tilemaps;
  */
 public class TileSOManager : MonoBehaviour
 {
-    public Tilemap tilemap; //
-    public TileSO  tile;    //
+    [SerializeField] Tilemap tilemap; //
+    [SerializeField] TileSO  tile;    //
 
     /**
 	 * 

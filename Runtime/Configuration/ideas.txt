@@ -3,3 +3,8 @@
 -scn-asset-management loads json assets, sprite assets, and so on.
 -scn-setup which is per project will have the loading icon and wallpaper.
 -scn-asset-management has the loading text and progress bar.
+
+-have an entity assembly.
+-do we actually need Tile, Furn, Item, Loot, Biome, ...
+-they all are the same thing.
+-just have entity without the T type.

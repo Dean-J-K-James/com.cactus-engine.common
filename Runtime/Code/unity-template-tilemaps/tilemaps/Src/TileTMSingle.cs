@@ -11,7 +11,7 @@ using UnityEngine.Tilemaps;
 public class TileTMSingle : TileTM
 {
     public string   sprite;     //
-    public string[] attributes; //put this in TileTMBase and default to false. less walls than paths so default should be false.
+    public string[] attributes; //put this in TileTMBase
 
     /**
      * 
